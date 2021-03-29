@@ -1,0 +1,198 @@
+<meta charset="utf-8"><!-- -*- markdown -*- -->
+    **CSE 291: Double Feature: Trustworthy Browsers // Secure Compilation using WebAssembly**
+         [*Deian Stefan*](https://cseweb.ucsd.edu/~dstefan/)
+
+About
+==============================================================
+
+This a double feature graduate course on trustworthy browsers and WebAssembly.
+The underlying theme between the two features is to build secure Web systems
+using techniques from programming languages, compilers, and verification.  This
+is a research-oriented course: We will read (sometimes hot-off-the press)
+research papers and work on a large research project spanning one or both of
+the features.
+
+**Trustworthy Browsers (Monday)**:
+
+This feature will cover the design and implementation of modern browsers
+security architectures. The feature will explore modern attack techniques on
+browsers and study different techniques for addressing these classes of attack.
+Students will carry out attacks on browsers (e.g., by exploiting JIT compiler
+bugs) and build systems (e.g., sandboxing, bugfinding, static analyses, and
+verification tools) to harden real world browsers.
+
+**Secure Compilation using WebAssembly (Wednesday)**
+
+This feature explores the use of secure compilations---a discipline that spans
+programming languages, compiler design, verification, and hardware---to build
+secure systems, and to rigorously specify and reason about security of these
+systems.  The feature will expose students to both formal approaches to secure
+compilations---covering different attacker models, security criteria, and proof
+techniques---and practical secure compiler design.
+
+Lectures:
+: Monday and Wednesday, 3:30--4:50pm, on Zoom
+
+Staff:
+: **Instructor**: Deian Stefan <deian+cse227@cs.ucsd.edu>
+
+: **Teaching Assistant**: Shravan Narayan
+
+Office hours:
+: **Deian**: Tuesday, 3:00--4:00pm, or by appointment
+
+: **Shravan**: By appointment
+
+Zoom information:
+: See [course Canvas site](https://canvas.ucsd.edu/courses/25115).  To facilitate
+  an open discussion, the in-class discussion will *not* be recorded.
+
+Class discussion:
+: We'll use Discord for all class related communication (invite link is on Canvas).
+
+Calendar and Readings
+==============================================================
+
+
+Mon Mar 29 2021: Course Intro
+    - [How to Read a Paper](papers/keshav:how.pdf) by S. Keshav 
+    - [A Note on the Confinement Problem](papers/lampson:confinement.pdf) by B. Lampson
+
+Wed Mar 31 2021: Wasm Intro
+  - *Read*:
+    - [Bringing the Web up to Speed with WebAssembly](papers/haas:wasm.pdf) by A. Haas et al.
+    - [Everything Old is New Again: Binary Security of WebAssembly](lehmann:old.pdf) by D. Lehmann et al.
+  - *Watch*:
+    - [Lucet: A Compiler and Runtime for High-Concurrency Low-Latency Sandboxing](https://www.youtube.com/watch?v=WddPA0U6v2A) by T. McMullen
+  - *Optional reading*:
+    - [Hijacking the control flow of a WebAssembly program](https://www.fastly.com/blog/hijacking-control-flow-webassembly) by J. Foote
+    - [WebAssembly doesn't make unsafe languages safe (yet)](https://00f.net/2018/11/25/webassembly-doesnt-make-unsafe-languages-safe/) by F. Denis
+
+Mon Apr 5 2021: In-the-Wild Series
+  - *Read*:
+    - [Introducing the In-the-Wild Series](https://googleprojectzero.blogspot.com/2021/01/introducing-in-wild-series.html) at least the first three posts.
+
+Wed Apr 7 2021: Secure Compilation Intro
+  - *Read*:
+    - [Formal Approaches to Secure Compilation:A Survey of Fully Abstract Compilation and Related Work](papers/patrignani:sc.pdf) by M. Patrignani et al.
+
+Mon Apr 12 2021: Library isolation
+  - *Read*:
+    - [Retrofitting Fine Grain Isolation in the Firefox Renderer](papers/narayan:retrofitting.pdf) by S. Narayan et al.
+  - *Additional reading*:
+    - [Principles and Implementation Techniques of Software-Based Fault Isolation](papers/tan:sfi.pdf) by G. Tan
+    - [The High-level Benefits of Low-level Sandboxing](papers/sammler:the-high-level.pdf) by M. Sammler et al.
+
+Wed Apr 14 2021: Wasm binary verification
+  - *Read*:
+    - [Доверя́й, но проверя́й: SFI safety for native-compiled Wasm](https://cseweb.ucsd.edu/~dstefan/pubs/johnson:2021:veriwasm.pdf) by E. Johnson et al.
+
+Fri Apr 16 2021: Project proposal
+
+  - *Expectation*: At the very least, you should have a clear problem
+    statement, brief literature survey (e.g., to understand how and if this
+    done before), evaluation questions and approach, and brief risk
+    analysis (e.g., to understand the best and worst case outcome of the
+    project).
+
+Mon Apr 19 2021: Process-based isolation
+  - *Read*:
+    - [Site Isolation: Process Separation for Web Sites within the Browser](papers/reis:site.pdf) by C. Reis et al.
+  - *Optional reading*:
+    - [Designing and Implementing the OP and OP2 Web Browsers](papers/grier:op.pdf) by C. Grier et al.
+
+Wed Apr 21 2021: Quark
+  - *Read*:
+    - [Establishing Browser Security Guarantees through Formal Shim Verification](papers/jang:quark.pdf) by D. Jang et al.
+  - *Optional reading*:
+    - [Sound Modular Verification of C Code Executing in an Unverified Context](papers/agten:modular.pdf) by P. Agten et al.
+
+Mon Apr 26 2021: Browser injection attacks
+  - *Read*:
+    - [Hardening Firefox against Injection Attacks](papers/kerschbaumer:ff.pdf) by C. Kerschbaumer et al.
+
+Wed Apr 28 2021: No class
+
+Fri Apr 30 2021: Status update
+
+Mon May 3 2021: JavaScript JIT exploitation
+ - *Read*:
+    - [Compile Your Own Type Confusion: Exploiting Logic Bugs in JavaScript JIT Engines](http://phrack.org/papers/jit_exploitation.html) by saelo
+    - [A case study of JavaScriptCore and CVE-2016-4622](http://phrack.org/papers/attacking_javascript_engines.html) by saelo
+ - *Optional reading*:
+    - [CodeAlchemist: Semantics-Aware Code Generation to Find Vulnerabilities in JavaScript Engines](papers/han:codealchemist.pdf) by H. Han et al.
+
+Wed May 5 2021: JIT verification
+ - *Read*:
+    - [Towards a verified range analysis for JavaScript JITs](https://cseweb.ucsd.edu/~dstefan/pubs/brown:2021:vera.pdf) by F. Brown et al.
+    - [Formally Verified Speculation and Deoptimization in a JIT Compiler](papers/barriere:jit.pdf) by A. Barriere et al.
+ - *Optional reading*:
+    - [Formal Certification of a Compiler Back-end](papers/leroy:compcert.pdf) by X. Leroy
+    
+Mon May 10 2021: JavaScript binding exploitation and defenses
+ - *Read*:
+    - [Finding and Preventing Bugs in JavaScript Bindings](papers/brown:finding.pdf) by F. Brown et al.
+    - [NoJITsu: Locking Down JavaScript Engines](papers/park:nojitsu.pdf) by T. Park et al.
+
+  
+Wed May 12 2021: PMAs and MS-Wasm
+  - *Read*:
+    - [Position Paper: Bringing Memory Safety to WebAssembly](https://cseweb.ucsd.edu/~dstefan/pubs/disselkoen:2019:ms-wasm.pdf) by C. Disselkoen et al.
+    - [Secure Compilation to Protected Module Architectures](papers/patrignani:pma.pdf) by M. Patrignani et al.
+    - [CHERI: A Hybrid Capability-System Architecture for Scalable Software Compartmentalization](papers/watson:cheri.pdf) by R. Watson et. al
+
+Fri May 14 2021: Status update
+
+Mon May 17 2021: Fuzzyfox
+ - *Read*:
+    - [Trusted Browsers for Uncertain Times](papers/kohlbrenner:fuzzyfox.pdf) by D. Kohlbrenner and H. Shacham
+
+Wed May 19 2021: Well-bracketedness
+  - *Read*:
+    - [StkTokens: enforcing well-bracketed control flow and stack encapsulation using linear capabilities](papers/skorstengaard:stktokens.pdf) by L. Skorstengaard et al.
+    - [Isolation Without Taxation: Near Zero Cost Transitions for SFI](papers/kolosick:zero-cost.pdf) by M. Kolosick et al.
+
+Mon May 24 2021: TBA
+
+Wed May 26 2021: TBA
+
+Mon May 31 2021: No class
+
+Wed Jun  2 2021: Presentations
+
+
+
+Evaluation
+==============================================================
+
+Since the primary goal of this course is to prepare to you to do research, the
+evaluation for this course is simple: (1) class participation, including
+leading a discussion, and (2) research project.
+
+Participation (35%)
+--------------------------------------------------------------
+
+You are expected to read the assigned paper(s) before each meeting. In class we
+will discuss the interesting parts of the paper(s). You are expected to do any
+background reading on your own and come prepared with questions and an
+evaluation of the paper. Beyond this, in groups of two you will lead the
+discussion for one of the lectures.
+
+Research project (65%)
+--------------------------------------------------------------
+
+You will work on projects in groups of 2-4.  The goal of the project is to
+conduct original research in security. You are encouraged to come up with your
+own project idea, but we have a few ideas that are well-scoped for a quarter
+project.
+
+At the end of the quarter, you are expected to turn in a short research paper
+(6-10 pages) and give a 10 minute talk. We will have periodic status updates to
+help you stay on track.
+
+
+<style class="fallback">body{visibility:hidden;white-space:pre;font-family:monospace}</style><script src="markdeep.min.js"></script>
+<script>
+  window.alreadyProcessedMarkdeep || (document.body.style.visibility="visible");
+  markdeepOptions= {tocStyle: 'short', sortScheduleLists: false };
+</script>

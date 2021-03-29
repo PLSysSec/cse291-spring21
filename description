@@ -1,0 +1,11 @@
+CSE 291: Double Feature: Trustworthy Browsers // Secure Compilation using WebAssembly
+
+This a double feature graduate course on trustworthy browsers and WebAssembly.  The underlying theme between the two features is to build secure Web systems using techniques from programming languages, compilers, and verification.  This is a research-oriented course: We will read (sometimes hot-off-the press) research papers and work on a large research project spanning one or both of the features.
+
+Feature 1: Trustworthy Browsers
+
+This feature will cover the design and implementation of modern browsers security architectures. The feature will explore modern attack techniques on browsers and study different techniques for addressing these classes of attack.  Students will carry out attacks on browsers (e.g., by exploiting JIT compiler bugs) and build systems (e.g., sandboxing, bugfinding, static analyses, and verification tools) to harden real world browsers.
+
+Feature 2: Secure Compilation using WebAssembly
+
+This feature explores the use of secure compilations---a discipline that spans programming languages, compiler design, verification, and hardware---to build secure systems, and to rigorously specify and reason about security of these systems.  The feature will expose students to both formal approaches to secure compilations---covering different attacker models, security criteria, and proof techniques---and practical secure compiler design.
